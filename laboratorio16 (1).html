@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link href="laboratorio16.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <form action="#" method="post" class="formal" 
+              style="margin: auto;display: table">
+            <fieldset>
+                <legend>Nuevo Producto</legend>
+
+                <table style="margin: auto" >
+                    <tr>
+                        <td><label for="txtproducto">Producto</label></td>
+                        <td>
+                            <input type="text" id="txtproducto" name="producto" style="width: 300px"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tipo</td>
+                        <td>
+                            <select name="tipo" style="width: 308px">
+                                <option value="Sep">Separata</option>
+                                <option value="Vid">Video</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Precio</td>
+                        <td>
+                            <input type="text" name="precio" placeholder="Ingrese precio"
+                                   style="width: 150px;text-align: right"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>fecha</td>
+                        <td>
+                            <input type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <input type="submit" value="Enviar Datos"/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+<SCRIPT language="Javascript">
+	var tamanioArray = prompt("Tamaño del Array", "10");
+	var miArray = new Array(tamanioArray-1);
+	//Pedir cada elemento del array
+	var conta;
+	for (conta=0; conta < tamanioArray; conta++)
+		miArray[conta] = prompt("Valor del elemento "+conta, "elem"+conta);
+
+	for (conta=0; conta < tamanioArray; conta++)
+	{
+		alert("el valor del elemento "+conta+" es: "+miArray[conta]);
+	}
+
+	for (conta=1; conta < 20; conta++)
+	{
+		if (conta==tamanioArray) 
+			continue;
+		document.write("<br>Número menor al ingresado "+conta);
+	}
+</SCRIPT>
+
+</BODY>
+</HTML>

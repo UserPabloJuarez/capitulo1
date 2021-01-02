@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<SCRIPT language="javascript">
+	function validaOperadores()
+	{
+		if (document.getElementById("operador1").value=="")
+		{
+			alert("Ingrese el operador 1");
+			document.getElementById("operador1").focus();
+			return false;
+		}
+		if (document.getElementById("operador2").value=="")
+		{
+			alert("Ingrese el operador 2");
+			document.getElementById("operador2").focus();
+			return false;
+		}
+		if (document.getElementById("operador1").value.indexOf('.')>=0)
+		{
+			alert("Operador 1 debe ser un entero");
+			document.getElementById("operador1").focus();
+			return false;
+		}
+		if (document.getElementById("operador2").value.indexOf('.')>=0)
+		{
+			alert("Operador 2 debe ser un entero");
+			document.getElementById("operador2").focus();
+			return false;
+		}
+		return true;
+	}
+
+	function suma()
+	{
+		if (validaOperadores())
+		{
+			document.forms[0].resultado.value = eval(document.forms[0].operador1.value) + 
+				eval(document.forms[0].operador2.value);
+		}
+	}
+	function resta()
+	{
+		if (validaOperadores())
+		{
+			document.forms[0].resultado.value = eval(document.forms[0].operador1.value) - 
+				eval(document.forms[0].operador2.value);
+		}
+	}
+	function multi()
+	{
+		if (validaOperadores())
+		{
+			document.forms[0].resultado.value = eval(document.forms[0].operador1.value) * 
+				eval(document.forms[0].operador2.value);
+		}
+	}
+	function divi()
+	{
+		if (validaOperadores())
+		{
+			document.forms[0].resultado.value = eval(document.forms[0].operador1.value) / 
+				eval(document.forms[0].operador2.value);
+		}
+	}
+	</SCRIPT>
+</HEAD>
+<BODY>
+
+
+<form> 
+<input type="text" id="operador1" maxlength="5" size="7" value="12">
+<input type="text" id="operador2" maxlength="5" size="7" value="13">
+<input type="button" value="+" onClick="suma()"> 
+<input type="button" value="-" onClick="resta()"> 
+<input type="button" value="*" onClick="multi()"> 
+<input type="button" value="/" onClick="divi()"> 
+<input type="text" id="resultado" maxlength="4" size="6">
+
+</form> 
+</BODY>
+</HTML>
